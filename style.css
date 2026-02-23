@@ -1,0 +1,27 @@
+ /* RESET DAS CONFIGURAÇOES DO NAVEGADOR */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ body{
+    background-color: rgba(255, 166, 0, 0.925);
+    
+    
+ }
+
+h2{
+    text-align: justify;
+    font-size: 2em;
+    font-family: Arial, sans-serif;
+
+}
+
+p {
+    text-align: justify;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
