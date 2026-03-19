@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Um degradê que lembra o céu nublado de Gotham */
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 30, 0.9)), 
+                url('https://images.alphacoders.com/511/511831.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #d1d1d1; /* Cinza claro para melhor leitura no fundo escuro */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #ffcc00; /* O clássico amarelo do emblema */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 30px auto;
+    max-width: 800px; /* Evita que o texto fique largo demais e difícil de ler */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente para o texto "saltar" */
+    border-left: 5px solid #ffcc00; /* Um detalhe lateral com a cor do Batman */
+    border-radius: 5px;
+}
+
+/* Um toque extra: efeito ao passar o mouse */
+h1:hover {
+    color: #ffffff;
+    transition: 0.5s;
+    cursor: default;
+}

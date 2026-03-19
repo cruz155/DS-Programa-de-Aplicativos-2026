@@ -1,0 +1,167 @@
+/* Importando fontes para o estilo GTA V */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --gta-orange: #f5a623; /* Laranja do logo GTA V */
+    --gta-dark-blue: #0f1c2d; /* Azul escuro quase preto */
+    --gta-light-grey: #e0e0e0;
+    --gta-medium-grey: #a0a0a0;
+    --gta-red: #d9534f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://wallpapercave.com/wp/wp1818292.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--gta-light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(15, 28, 45, 0.95); /* Cor de fundo com transparência */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border-top: 5px solid var(--gta-orange);
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px; /* Ajuste o tamanho do logo conforme a imagem gerada */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 8px var(--gta-orange));
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: var(--gta-orange);
+    font-size: 2.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+header p {
+    font-size: 1.1em;
+    color: var(--gta-medium-grey);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--gta-light-grey);
+}
+
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border: 2px solid var(--gta-medium-grey);
+    border-radius: 5px;
+    background-color: var(--gta-dark-blue);
+    color: var(--gta-light-grey);
+    font-size: 1.1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: var(--gta-medium-grey);
+    opacity: 0.7;
+}
+
+input[type="number"]:focus {
+    border-color: var(--gta-orange);
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.5);
+}
+
+button {
+    background-color: var(--gta-orange);
+    color: var(--gta-dark-blue);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #e0981e; /* Um laranja um pouco mais escuro */
+    transform: translateY(-2px);
+}
+
+.resultados-panel {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top: 3px solid var(--gta-orange);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.resultados-panel h2 {
+    font-family: 'Anton', sans-serif;
+    color: var(--gta-orange);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.resultados-panel p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    color: var(--gta-light-grey);
+}
+
+.resultados-panel p strong {
+    color: var(--gta-orange);
+    min-width: 100px; /* Para alinhar o texto "Average:", "Sum:", etc. */
+    display: inline-block;
+}
+
+.resultados-panel span {
+    font-weight: bold;
+    color: var(--gta-light-grey);
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 25px;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    .logo {
+        width: 120px;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}

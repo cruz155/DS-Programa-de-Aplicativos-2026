@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Santos Calculations - GTA V Style</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="gta_v_logo.png" alt="Los Santos Calculations Logo" class="logo">
+            <h1>Los Santos Calculations</h1>
+            <p>Enter your numbers, Los Santos style!</p>
+        </header>
+
+        <main>
+            <div class="input-group">
+                <label for="numero1">Number 1:</label>
+                <input type="number" id="numero1" placeholder="Enter first number">
+            </div>
+            <div class="input-group">
+                <label for="numero2">Number 2:</label>
+                <input type="number" id="numero2" placeholder="Enter second number">
+            </div>
+            <button id="calcularBtn">Calculate!</button>
+
+            <div id="resultados" class="resultados-panel">
+                <h2>Results:</h2>
+                <p><strong>Average:</strong> <span id="media"></span></p>
+                <p><strong>Sum:</strong> <span id="soma"></span></p>
+                <p><strong>Product:</strong> <span id="produto"></span></p>
+                <p><strong>Largest:</strong> <span id="maior"></span></p>
+                <p><strong>Smallest:</strong> <span id="menor"></span></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
