@@ -1,0 +1,78 @@
+/* Container Principal (A "Carta" do Aluno) */
+.dc-card {
+  background: linear-gradient(145deg, #0b0e14, #1a2235); /* Fundo escuro estilo Gotham/Batcaverna */
+  border: 2px solid #2a3654;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  color: #e0e6ed;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Detalhe superior colorido (Azul Superman, Vermelho Flash, Amarelo Mulher-Maravilha) */
+.dc-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #005b9f, #ed1d24, #f9a825);
+  transition: height 0.3s ease;
+}
+
+/* EFEITO AO PASSAR O MOUSE NO CARD */
+.dc-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Card levanta e cresce levemente */
+  box-shadow: 0 15px 35px rgba(0, 91, 159, 0.5); /* Brilho azul kryptoniano */
+  border-color: #005b9f;
+}
+
+.dc-card:hover::before {
+  height: 8px; /* A barra superior fica mais grossa */
+}
+
+/* Título */
+.dc-card h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f9a825; /* Amarelo icônico */
+  margin-top: 0;
+  margin-bottom: 25px;
+  border-bottom: 1px dashed #40527c;
+  padding-bottom: 10px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no card reflete no Título */
+.dc-card:hover h2 {
+  text-shadow: 0 0 12px rgba(249, 168, 37, 0.8); /* Título ganha brilho neon */
+}
+
+/* Linhas de Informação (Parágrafos) */
+.dc-card p {
+  font-size: 1.15rem;
+  margin: 15px 0;
+  padding: 8px 12px;
+  border-left: 3px solid transparent;
+  border-radius: 0 6px 6px 0;
+  transition: all 0.3s ease;
+}
+
+.dc-card p strong {
+  color: #8c9eff; /* Destaque leve nos rótulos */
+}
+
+/* EFEITO AO PASSAR O MOUSE EM CADA LINHA */
+.dc-card p:hover {
+  border-left: 4px solid #ed1d24; /* Raio vermelho lateral estilo Flash */
+  padding-left: 18px; /* Texto "empurra" para a direita */
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08); /* Fundo sutil para destacar a linha */
+}

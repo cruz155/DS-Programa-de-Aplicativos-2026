@@ -1,0 +1,85 @@
+/* Container Principal (O "Quadrinho") */
+.info-curso {
+  background-color: #151515;
+  border: 3px solid #333333;
+  border-radius: 4px;
+  padding: 25px;
+  max-width: 450px;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  box-shadow: 8px 8px 0px #000000; /* Sombra dura estilo HQ */
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Dá um respiro entre as caixas de informação */
+}
+
+/* Faixa vermelha no topo do card */
+.info-curso::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #ED1D24; /* Vermelho Marvel */
+  transition: height 0.2s ease;
+}
+
+/* EFEITO 1: PASSAR O MOUSE NO CARD INTEIRO */
+.info-curso:hover {
+  transform: translate(-5px, -5px); /* Dá um "soco" para frente e para a esquerda */
+  box-shadow: 12px 12px 0px #ED1D24; /* A sombra preta vira vermelha */
+  border-color: #ED1D24;
+}
+
+.info-curso:hover::before {
+  height: 10px; /* A faixa do topo fica mais grossa */
+}
+
+/* ========================================= */
+/* ESTILIZANDO O TÍTULO (O primeiro <p>)     */
+/* ========================================= */
+.info-curso p:first-child {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  background-color: #ED1D24;
+  color: #ffffff;
+  align-self: flex-start; /* Impede que o fundo vermelho ocupe a linha toda */
+  padding: 5px 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: skewX(-10deg); /* Inclinação de velocidade/ação */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito no título quando o mouse está no card */
+.info-curso:hover p:first-child {
+  transform: skewX(-10deg) scale(1.08); /* Aumenta o título */
+}
+
+/* ========================================= */
+/* ESTILIZANDO OS DADOS (Os outros <p>)      */
+/* ========================================= */
+.info-curso p:not(:first-child) {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 12px 15px;
+  background-color: #1e1e1e; /* Fundo cinza escuro para cada linha */
+  border-left: 4px solid #444444;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+/* EFEITO 2: PASSAR O MOUSE EM UMA LINHA ESPECÍFICA */
+.info-curso p:not(:first-child):hover {
+  background-color: #2a2a2a; /* Clareia o fundo */
+  border-left: 6px solid #00E5FF; /* Borda ciano estilo Homem de Ferro */
+  transform: translateX(10px); /* Empurra o dado para a direita */
+  color: #00E5FF; /* O texto ganha cor */
+}
